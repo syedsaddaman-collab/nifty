@@ -20,6 +20,7 @@ jobs:
 
       - name: Build with Buildozer
         run: |
+          rm -rf ~/.buildozer/android/platform/android-ndk-*
           buildozer --verbose android debug
         env:
           PYTHON_VERSION: 3.10
