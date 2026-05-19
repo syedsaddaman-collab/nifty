@@ -20,8 +20,8 @@ jobs:
 
       - name: Build with Buildozer
         run: |
-          # Server ke pre-installed NDK ka path use karo
-          export ANDROID_NDK_HOME=/usr/local/lib/android/sdk/ndk/27.3.13750724
+          # NDK version ko forcefully 25b par lock kar rahe hain
+          export P4A_NDK_VERSION=25b
           buildozer --verbose android debug
         env:
           PYTHON_VERSION: 3.10
