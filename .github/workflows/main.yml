@@ -15,12 +15,13 @@ jobs:
       - name: Install System Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo6 cmake libffi-dev libssl-dev
+          sudo apt-get install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo6 cmake libffi-dev libssl-dev automake
           pip3 install --user --upgrade buildozer cython
 
       - name: Build with Buildozer
         run: |
-          rm -rf ~/.buildozer/android/platform/android-ndk-*
+          # Cache saaf karo taaki purani broken files hat jayein
+          rm -rf .buildozer/android/platform/build-*
           buildozer --verbose android debug
         env:
           PYTHON_VERSION: 3.10
