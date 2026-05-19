@@ -5,7 +5,7 @@ package.domain = org.sam
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 version = 16.2
-requirements = python3,kivy==2.3.0,requests,certifi,urllib3,pyjnius==1.6.1
+requirements = python3,kivy==2.3.0,requests
 orientation = portrait
 fullscreen = 0
 android.permissions = INTERNET,ACCESS_NETWORK_STATE,WAKE_LOCK
