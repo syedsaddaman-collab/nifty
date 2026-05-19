@@ -20,8 +20,8 @@ jobs:
 
       - name: Build with Buildozer
         run: |
-          # Cache saaf karo taaki purani broken files hat jayein
-          rm -rf .buildozer/android/platform/build-*
+          # Server ke pre-installed NDK ka path use karo
+          export ANDROID_NDK_HOME=/usr/local/lib/android/sdk/ndk/27.3.13750724
           buildozer --verbose android debug
         env:
           PYTHON_VERSION: 3.10
