@@ -20,7 +20,7 @@ jobs:
 
       - name: Build with Buildozer
         run: |
-          buildozer -v android debug
+          buildozer --verbose android debug
         env:
           PYTHON_VERSION: 3.10
 
